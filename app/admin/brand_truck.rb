@@ -1,6 +1,8 @@
 ActiveAdmin.register BrandTruck,  as: 'MarcaDeCamiones' do
 
-
+  menu  :parent => 'Camion', :label => 'Marcas', :priority =>1
+  config.filters = false
+  config.batch_actions = false
 
 
   # See permitted parameters documentation:
@@ -27,7 +29,7 @@ ActiveAdmin.register BrandTruck,  as: 'MarcaDeCamiones' do
    end
 
 
-   menu  :parent => 'Camion', :label => 'Marcas'
+
 
    index :title => 'Marcas Camion', :column => :name
 

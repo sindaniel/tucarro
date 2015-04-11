@@ -1,8 +1,9 @@
 class BrandTruck < ActiveRecord::Base
+  has_many :trucks
 
   HUMANIZED_ATTRIBUTES = {
       :name => 'Nombre',
-       :created_at => 'Creado',
+      :created_at => 'Creado',
       :updated_at => 'Actualizado'
   }
 
@@ -11,10 +12,9 @@ class BrandTruck < ActiveRecord::Base
   end
 
 
+  validates :name, presence: true
 
 
 
 
 end
-
-
